@@ -20,7 +20,7 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 11
-font pango:Droid Sans 12
+font pango:Droid Sans 13
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -188,9 +188,9 @@ set $nord15 #ECEFF4
 # ===window colors===
 
 # class                 border      backgr.     text      indicator     child_border
-client.focused          $nord4      $nord4      $nord0    $nord2        $nord4
-client.focused_inactive $nord0      $nord0      $nord7    $nord2        $nord4
-client.unfocused        $nord0      $nord0      $nord7    $nord2        $nord4
+client.focused          $nord4      $nord4      $nord0    $nord2        $nord8
+client.focused_inactive $nord0      $nord0      $nord7    $nord2        $nord8
+client.unfocused        $nord0      $nord0      $nord7    $nord2        $nord8
 client.urgent           $nord1      $nord1      $nord7    $nord2        $nord1
 
 client.background       #ffffff
