@@ -1,17 +1,31 @@
+! ~/config/rofi
 
+! ===Nord colors===
+
+! set $nord0  #3B4252   
+! set $nord1  #BF616A   
+! set $nord2  #A3BE8C  
+! set $nord3  #EBCB8B
+! set $nord4  #81A1C1
+! set $nord5  #B48EAD
+! set $nord6  #88C0D0
+! set $nord7  #E5E9F0
+! set $nord8  #4C566A
+! set $nord9  #BF616A
+! set $nord10 #A3BE8C
+! set $nord11 #EBCB8B
+! set $nord12 #81A1C1
+! set $nord13 #B48EAD
+! set $nord14 #8FBCBB
+! set $nord15 #ECEFF4
 
 ! State:           ´bg´,     ´fg´,     ´bgalt´,  ´hlbg´,   ´hlfg´
-!rofi.color-normal: #fdf6e3,  #002b36,  #eee8d5,  #586e75,  #eee8d5
-!rofi.color-urgent: #fdf6e3,  #dc322f,  #eee8d5,  #dc322f,  #fdf6e3
-!rofi.color-active: #fdf6e3,  #268bd2,  #eee8d5,  #268bd2,  #fdf6e3
-
-rofi.color-normal: #282828,  #ffffff,  #282828,  #a6a6a6,  #000000
-rofi.color-urgent: #fdf6e3,  #ff4545,  #eee8d5,  #dc322f,  #fdf6e3
-rofi.color-active: #13d41d,  #13d41d,  #13d41d,  #13d41d,  #13d41d
+rofi.color-normal: #3B4252,  #E5E9F0,  #3B4252,  #81A1C1,  #3B4252 
+rofi.color-urgent: #BF616A , #3B4252,  #BF616A,  #EBCB8B,  #3B4252   
+rofi.color-active: #3B4252,  #E5E9F0,  #3B4252,  #81A1C1,  #3B4252 
 
 !                  ´background´, ´border´, ´separator´
-!rofi.color-window: #282828,      #002b36,  #002b36
-rofi.color-window: #282828,      #e30508,  #002b36
+rofi.color-window:  #3B4252,      #3B4252,  #3B4252
 
 rofi.location: 1
 rofi.width: 100
@@ -19,12 +33,3 @@ rofi.hide-scrollbar: true
 rofi.separator-style: none
 rofi.lines: 5
 rofi.columns: 1
-
-!rofi.width: 100
-!rofi.lines: 5
-!rofi.columns: 2
-!rofi.font: Droid Sans 14
-rofi.bw: 0
-!rofi.padding: 400
-rofi.eh: 1
-!rofi.hide-scrollbar: true
