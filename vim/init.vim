@@ -1,56 +1,85 @@
+" ===Plugins===
+" call plug#begin('C:\Users\ramon\AppData\Local\nvim\plugged')
 call plug#begin('~/.config/nvim/plugged')
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
-Plug 'fratajczak/one-monokai-vim'
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'sheerun/vim-polyglot'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'airblade/vim-gitgutter'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rakr/vim-one'
-Plug 'guns/xterm-color-table.vim'
-Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'bfrg/vim-cpp-modern'
+" Plug 'scrooloose/syntastic'
+" Plug 'neoclide/coc.nvim'
+
 Plug 'scrooloose/nerdtree'
-Plug 'lifepillar/vim-solarized8'
 Plug 'xuyuanp/nerdtree-git-plugin'
+
+Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+Plug 'arcticicestudio/nord-vim'
+" Plug 'cocopon/iceberg.vim'
+" Plug 'rakr/vim-one'
+" Plug 'joshdick/onedark.vim'
+" Plug 'tomasr/molokai'
+" Plug 'morhetz/gruvbox'
+" Plug 'dracula/vim'
+" Plug 'sainnhe/edge'
 call plug#end()
 
-set laststatus=2
-"set showtabline=1
-"set noshowmode
-set termguicolors
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"set t_Co=256
-set title
+" ===General settings===
+" language en_US " windows GUI nvim
+syntax enable
 set number
 set relativenumber
-set wildmenu
-"set hlsearch
-set updatetime=500
+set termguicolors
+set updatetime=100
+set signcolumn=yes
 set mouse=a            " Enable mouse usage (all modes)
-syntax on
+set cursorline
 
 set background=dark
-colorscheme one_monokai
+colorscheme nord
 
-
-"airline settings
+" ===vim cpp enhanced highlight settings===
+ let g:cpp_class_scope_highlight = 1
+ let g:cpp_member_variable_highlight = 1
+ let g:cpp_class_decl_highlight = 1
+ let g:cpp_posix_standard = 1
+ 
+" ===airline settings===
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='onedark'
-
-"vim cpp enhanced highlight
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_posix_standard = 1
-let g:cpp_experimental_template_highlight = 1
-let g:cpp_concepts_highlight = 1
 
 
+" ====NerdTree settings ===
+" open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let NERDTreeQuitOnOpen = 1
+let g:NERDTreeWinSize=50
 
+" ===NerdTree Git Plugin===
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "M",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "U",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
 
+" ===Custom mappings===
+map <Space> <Leader>
+map <M-l> <Esc>
+
+map <Leader>nt :NERDTreeToggle<CR>
+map <Leader>nf :NERDTreeFind<CR>
+map <Leader>p viwp
+map <Leader>c viwy
