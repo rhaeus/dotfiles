@@ -16,7 +16,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+alt+down",
+        "key": "shift+alt+down",
         "command": "-editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -26,14 +26,14 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+alt+up",
+        "key": "shift+alt+up",
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "alt+l",
         "command": "extension.vim_escape",
-        "when": "vim.active"//editorTextFocus && vim.active" // && vim.mode == 'Insert'"
+        "when": "editorTextFocus && vim.active"// && vim.mode == 'Insert'"
     },
     {
         "key": "gd",
@@ -45,9 +45,5 @@
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
     },
-    {
-        "key": "ctrl+k ctrl+i",
-        "command": "-editor.action.showHover",
-        "when": "editorTextFocus"
-    }
+   
 ]
