@@ -100,7 +100,11 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Moving workspaces between screens
-bindsym $mod+p move workspace to output right
+# move workspace to output left|right|down|up|current|primary|<output>
+bindsym $mod+Shift+w move workspace to output up
+bindsym $mod+Shift+a move workspace to output left
+bindsym $mod+Shift+s move workspace to output down
+bindsym $mod+Shift+d move workspace to output right
 
 set $ws1 "1 " 
 set $ws2 "2 " 
@@ -233,7 +237,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # set wallpaper
-exec_always --no-startup-id feh --bg-scale /home/ramona/Pictures/KITcarLogo_3.png
+# exec_always --no-startup-id feh --bg-scale /home/ramona/Pictures/KITcarLogo_3.png
+exec_always --no-startup-id feh --bg-scale /home/ramona/.config/i3/ubuntu_logo.png /home/ramona/.config/i3/ubuntu_logo.png /home/ramona/.config/i3/ubuntu_logo.png 
 
 #touch pad
 #xinput --list
@@ -250,7 +255,7 @@ exec_always --no-startup-id feh --bg-scale /home/ramona/Pictures/KITcarLogo_3.pn
 #exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 # set keyboard layout, check with setxkbmap -query
-exec --no-startup-id setxkbmap -layout us -variant intl
+# exec --no-startup-id setxkbmap -layout us -variant intl
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 #exec --no-startup-id /usr/libexec/gnome-settings-daemon
