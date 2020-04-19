@@ -1,0 +1,9 @@
+Nord Theme: https://github.com/arcticicestudio
+
+Gnome:            Nordic https://github.com/EliverLara/Nordic in ~/.themes
+Icons:            https://github.com/zayronxio/Zafiro-icons in ~/.icons
+Font:             Droid Sans 12
+tmux:             https://github.com/arcticicestudio/nord-tmux siehe ../tmux
+gnome terminal:   https://github.com/arcticicestudio/nord-gnome-terminal
+                  Font: Source Code Pro Medium 14 (Source_Code_Pro in ~/.fonts)
+gedit:            https://github.com/arcticicestudio

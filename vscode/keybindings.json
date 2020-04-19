@@ -1,0 +1,53 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+l",
+        "command": "extension.vim_escape",
+        "when": "vim.active"//editorTextFocus && vim.active" // && vim.mode == 'Insert'"
+    },
+    {
+        "key": "gd",
+        "command": "editor.action.openLink",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "alt+t",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    }
+]

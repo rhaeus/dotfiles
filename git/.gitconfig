@@ -1,0 +1,19 @@
+# ~/.gitconfig
+
+[fetch]
+	prune = true
+[pull]
+	prune = true
+	rebase = true
+[alias]
+	ls = log --pretty=format:\"%C(yellow)%h\\\\ %ad%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=relative
+	ll = log --pretty=format:\"%C(yellow)%h\\\\ %ad%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=relative --numstat
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[user]
+	name = Ramona Häuselmann
+	email = ujgfd@student.kit.edu
+[core]
+	editor = nano
