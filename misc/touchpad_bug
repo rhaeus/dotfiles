@@ -1,0 +1,9 @@
+https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1722478/+index?comments=all
+
+Edit file /etc/default/grub and change line:
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+to
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash psmouse.synaptics_intertouch=0"
+then
+sudo update-grub
+reboot
