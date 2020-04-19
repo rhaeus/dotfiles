@@ -165,59 +165,68 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color           #282828 
-set $bg-contrast-color	#a6a6a6
-set $white-color	#ffffff
-set $alternative 	#525863
 
-# class                 border  backgr. text    indicator child_border
-#client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
-#client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
+# ===Nord colors===
 
-client.focused          $bg-color $bg-color $white-color #ff3030 
-client.focused_inactive $bg-color $bg-color $white-color #ff3030
-client.unfocused        $bg-color #000000 $bg-contrast-color #ff3030
-client.urgent           #900000 #900000 #ffffff #900000
+set $nord0  #3B4252   
+set $nord1  #BF616A   
+set $nord2  #A3BE8C  
+set $nord3  #EBCB8B
+set $nord4  #81A1C1
+set $nord5  #B48EAD
+set $nord6  #88C0D0
+set $nord7  #E5E9F0
+set $nord8  #4C566A
+set $nord9  #BF616A
+set $nord10 #A3BE8C
+set $nord11 #EBCB8B
+set $nord12 #81A1C1
+set $nord13 #B48EAD
+set $nord14 #8FBCBB
+set $nord15 #ECEFF4
+
+# ===window colors===
+
+# class                 border      backgr.     text      indicator     child_border
+client.focused          $nord4      $nord4      $nord0    $nord2        $nord4
+client.focused_inactive $nord0      $nord0      $nord7    $nord2        $nord4
+client.unfocused        $nord0      $nord0      $nord7    $nord2        $nord4
+client.urgent           $nord1      $nord1      $nord7    $nord2        $nord1
+
+client.background       #ffffff
+
+# ===Status Bar===
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	font pango:Droid Sans, FontAwesome 11
-        status_command i3status -c ~/.config/i3/.i3status.conf
-
-	separator_symbol ":|:"
-#tray_output <output>
+	font              pango:Droid Sans, FontAwesome 12
+  status_command    i3status -c ~/.config/i3/.i3status.conf
+	separator_symbol  ":|:"
 	
 	colors {
-        	background $bg-color 
-        	statusline #ffffff
-		
-		separator #666666
+    background  $nord0
+    statusline  $nord7
+		separator   $nord4
 
-		#<colorclass> <border> <background> <text>
-		focused_workspace  #a6a6a6 #a6a6a6 #000000
-		active_workspace   #282828 #282828 #ffffff
-		inactive_workspace #282828 #282828 #ffffff
-		urgent_workspace   #ff5252 #ff5252 #ffffff
-		binding_mode       #ff5252 #ff5252 #ffffff
-    	}
+		#<colorclass>       <border>  <background>  <text>
+		focused_workspace   $nord4    $nord4        $nord0
+		active_workspace    $nord8    $nord8        $nord7
+		inactive_workspace  $nord0    $nord0        $nord7
+		urgent_workspace    $nord1    $nord1        $nord7
+  }
 }
 
 #lock pc
-#bindsym $mod+shift+x exec i3lock --color "#282828"
-#bindsym $mod+shift+x exec i3lock -i /home/ramona/.config/i3/matrix2.png -e -f
 bindsym $mod+shift+x exec i3lock -i /home/ramona/.config/i3/ubuntu_logo.png -e -f
-#lock and suspend
-bindsym $mod+shift+z exec i3lock -i /home/ramona/.config/i3/matrix2.png -e -f && systemctl suspend 
+
+#lock pc and suspend
+bindsym $mod+shift+z exec i3lock -i /home/ramona/.config/i3/ubuntu_logo.png -e -f && systemctl suspend 
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master toggle
-
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 2 +5%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
