@@ -222,10 +222,12 @@ bar {
 }
 
 #lock pc
-bindsym $mod+shift+x exec i3lock -i /home/ramona/.config/i3/ubuntu_logo.png -e -f
+#bindsym $mod+shift+x exec i3lock -i /home/ramona/.config/i3/ubuntu_logo.png -e -f
+bindsym $mod+shift+x exec /home/ramona/.config/i3/lock.sh
 
 #lock pc and suspend
-bindsym $mod+shift+z exec i3lock -i /home/ramona/.config/i3/ubuntu_logo.png -e -f && systemctl suspend 
+#bindsym $mod+shift+z exec i3lock -i /home/ramona/.config/i3/ubuntu_logo.png -e -f && systemctl suspend 
+bindsym $mod+shift+z exec /home/ramona/.config/i3/lock.sh && systemctl suspend 
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
