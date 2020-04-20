@@ -150,7 +150,9 @@ GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWUPSTREAM="verbose"
 source ~/.scripts/git-prompt.sh
 
-PS1='${debian_chroot:+($debian_chroot)}\[$(tput bold)\]\e[32;1m\u@\h:\[$(tput bold)\]\e[34;1m\w\e[33;1m$(__git_ps1 " [%s]") \e[30;1m\$ \n\[$(tput bold)\]\e[31;1m> \e[0m'
+PS1='\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36m> \e[m'
+#PS1='${debian_chroot:+($debian_chroot)}\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36m> \e[m'
+#PS1='${debian_chroot:+($debian_chroot)}\[$(tput bold)\]\e[32;1m\u@\h:\[$(tput bold)\]\e[34;1m\w\e[33;1m$(__git_ps1 " [%s]") \e[30;1m\$ \n\[$(tput bold)\]\e[31;1m> \e[0m'
 
 #PS1='\e]4;1;#RRGGBB\a[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
