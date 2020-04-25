@@ -34,6 +34,8 @@ set updatetime=100
 set signcolumn=yes
 set mouse=a            " Enable mouse usage (all modes)
 set cursorline
+set wildmenu
+set wildmode=longest:full,full
 
 set background=dark
 colorscheme nord
@@ -83,3 +85,10 @@ map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFind<CR>
 map <Leader>p viwp
 map <Leader>c viwy
+" replace word at cursor in whole file with confirmation
+map <Leader>ra yiw:%s/\<<C-r><C-w>\>//gc<left><left><left> 
+" replace a word in currently highlighted block
+map <Leader>rv :s//g<left><left>
+" replace word in last yanked and pasted block
+map <Leader>ry :'[,']s//g<left><left>
+
