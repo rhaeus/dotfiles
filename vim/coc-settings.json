@@ -1,0 +1,5 @@
+// ~/.config/nvim/coc-setting.json
+
+{
+  "clangd.path": "/usr/bin/clangd-9"
+}

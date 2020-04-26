@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'bfrg/vim-cpp-modern'
 " Plug 'scrooloose/syntastic'
-" Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -34,8 +34,16 @@ set updatetime=100
 set signcolumn=yes
 set mouse=a            " Enable mouse usage (all modes)
 set cursorline
-set wildmenu
-set wildmode=longest:full,full
+
+set expandtab
+set tabstop=2
+set shiftwidth=0
+set autoindent
+set smartindent
+
+"set wildmenu
+"set wildmode=list:longest,full 
+" set wildmode=longest:full,full
 
 set background=dark
 colorscheme nord
@@ -45,6 +53,9 @@ colorscheme nord
  let g:cpp_member_variable_highlight = 1
  let g:cpp_class_decl_highlight = 1
  let g:cpp_posix_standard = 1
+
+" ===coc settings===
+source ~/.config/nvim/plug-config/coc.vim
  
 " ===airline settings===
 let g:airline_powerline_fonts = 1
