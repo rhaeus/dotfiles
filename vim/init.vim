@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'APZelos/blamer.nvim'
 
 Plug 'arcticicestudio/nord-vim'
 " Plug 'cocopon/iceberg.vim'
