@@ -123,8 +123,8 @@ if ! shopt -oq posix; then
 fi
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    #tmux attach -t default || tmux new -s default
-tmux
+  #tmux attach -t default || tmux new -s default
+  tmux
 fi
 
 # my aliases
@@ -137,12 +137,12 @@ export CMAKE_PREFIX_PATH=/home/ramona/programs/Qt/5.12.7/gcc_64/lib/cmake/:$CMAK
 #export PATH=/home/ramona/programs/android-studio/bin/:$PATH
 
 #powerline
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 source /home/ramona/kitcar/kitcar-init/config/bashrc_private
 
-export PAGER=most
-export EDITOR=nvim
+#export PAGER=most #problem with bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
@@ -182,11 +182,59 @@ PS1='\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36
 
 
 
-
-
 export PATH="$PATH:/home/ramona/programs/microchip/xc8/v2.10/bin"
 # robot_folders setup
 export ROB_FOLDERS_IGNORE_CMAKE_PREFIX_PATH=":-)"
 source /home/ramona/Documents/FZI/robot_folders/bin/fzirob_source.sh
 
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+# test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+
+#__conda_setup="$('/home/ramona/programs/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+ #   if [ -f "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh" ]; then
+  #      . "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh"
+  #  else
+   #     export PATH="/home/ramona/programs/anaconda3/bin:$PATH"
+  #  fi
+#fi
+#unset __conda_setup
+#onda config --set changeps1 False
+
+# <<< conda initialize <<<
+
+
+#====FZF==============
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#--color fg:#D8DEE9
+#--color bg:#2E3440
+#--color hl:#A3BE8C
+#--color fg+:#D8DEE9
+#--color bg+:#434C5E
+#--color hl+:#A3BE8C
+#--color pointer:#BF616A
+#--color info:#4C566A
+#--color spinner:#4C566A
+#--color header:#4C566A
+#--color prompt:#81A1C1
+#--color marker:#EBCB8B
+#--color gutter:#2E3440
+#--color border:#4C566A
+#'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
+--color=fg:#eceff4,bg:#3B4252,gutter:#3B4252,hl:#a3be8c 
+--color=fg+:#8FBCBB,bg+:#434C5E,hl+:#bf616a 
+--color=info:#ebcb8b,prompt:#5e81ac,pointer:#bf616a 
+--color=marker:#b48ead,spinner:#ebcb8b,header:#5e81ac
+--layout=reverse'
+#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"--ansi --preview-window 'right:60%' --preview 'bat --color=always --theme=Nord --style=header,grid --line-range :300 {}'"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS" --ansi --preview-window 'right:60%' --preview 'bat --color=always --theme=Nord --style=header --line-range :300 {}'"
+
+export EDITOR=nvim
+
