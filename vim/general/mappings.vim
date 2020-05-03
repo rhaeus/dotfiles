@@ -21,9 +21,9 @@ map <Leader>bd :bd<cr>
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
-" switching windows
 noremap <Leader>s :w<CR>
 
+" switching windows
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
@@ -33,10 +33,10 @@ noremap <C-h> <C-w>h
 vmap < <gv
 vmap > >gv
 
-" TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
-" SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
+" " TAB in general mode will move to text buffer
+" nnoremap <TAB> :bnext<CR>
+" " SHIFT-TAB will go back
+" nnoremap <S-TAB> :bprevious<CR>
 
 " Use alt + hjkl to resize windows
 nnoremap <M-j>    :resize -2<CR>
