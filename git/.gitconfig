@@ -16,4 +16,4 @@
 	name = Ramona Häuselmann
 	email = ujgfd@student.kit.edu
 [core]
-	editor = nano
+	editor = nvim
