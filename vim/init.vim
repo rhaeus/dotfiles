@@ -1,6 +1,8 @@
 " ===Plugins===
 " call plug#begin('C:\Users\ramon\AppData\Local\nvim\plugged')
 call plug#begin('~/.config/nvim/plugged')
+Plug 'mhinz/vim-startify'
+
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -35,6 +37,7 @@ set signcolumn=yes
 set mouse=a            " Enable mouse usage (all modes)
 set cursorline
 set noshowmode
+set nowrap
 
 set expandtab
 set tabstop=2
@@ -65,6 +68,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim      "ranger
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/commentary.vim
+source $HOME/.config/nvim/plug-config/start-screen.vim
 
 " ===vim cpp enhanced highlight settings===
  let g:cpp_class_scope_highlight = 1
