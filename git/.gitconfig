@@ -17,3 +17,4 @@
 	email = ujgfd@student.kit.edu
 [core]
 	editor = nvim
+	excludesfile = /home/ramona/.gitignore
