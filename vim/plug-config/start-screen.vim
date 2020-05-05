@@ -4,8 +4,8 @@ let g:startify_session_dir = '~/.config/nvim/session'
 let g:startify_lists = [
   \ { 'type': 'files',     'header': ['   Recent Files']            },
   \ { 'type': 'dir',       'header': ['   Project Directory '. getcwd()] },
-  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
   \ { 'type': 'sessions',  'header': ['   Sessions']       },
+  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
   \ ]
 let g:startify_bookmarks = [
   \ { 'c': '~/.config/i3/config' },
