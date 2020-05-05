@@ -5,8 +5,8 @@ map <Space> <Leader>
 map <M-l> <Esc>
 noremap <Leader>o o<Esc>
 noremap <Leader>O O<Esc>
-map <Leader>p viwp
 map <Leader>c viwy
+map <Leader>p viwp<Leader>c
 " replace word at cursor in whole file with confirmation
 map <Leader>ra yiw:%s/\<<C-r><C-w>\>//gc<left><left><left> 
 " replace a word in currently highlighted block
@@ -15,7 +15,9 @@ map <Leader>rv :s//g<left><left>
 map <Leader>ry :'[,']s//g<left><left>
 
 map <Leader>bn :bn<cr>
+map <Leader>k  :bn<cr>
 map <Leader>bp :bp<cr>
+map <Leader>j  :bp<cr>
 map <Leader>bd :bd<cr>  
 
 noremap <Leader>h :<C-u>split<CR>
