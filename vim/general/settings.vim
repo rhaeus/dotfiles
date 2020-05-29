@@ -33,6 +33,11 @@ set splitright
 
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 
+set foldmethod=syntax   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
 set background=dark
 colorscheme nord
 
