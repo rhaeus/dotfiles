@@ -20,10 +20,9 @@ map <Leader>bp :bp<cr>
 map <Leader>j  :bp<cr>
 map <Leader>bd :bd<cr>  
 
-noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
-
-noremap <Leader>s :w<CR>
+noremap <Leader>sh :<C-u>split<CR>
+noremap <Leader>sv :<C-u>vsplit<CR>
+noremap <Leader>qw <C-w>q
 
 " switching windows
 noremap <C-j> <C-w>j
