@@ -76,9 +76,22 @@
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.theme": "classic",
     "material-icon-theme.opacity": null,
-    "material-icon-theme.folders.color": "#88c0d0",
+    "material-icon-theme.folders.color": "#81A1C1",
     "material-icon-theme.saturation": 1,
     "material-icon-theme.hidesExplorerArrows": true,
     "workbench.startupEditor": "newUntitledFile",
-    "editor.formatOnSave": true,
+    // "editor.formatOnSave": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "NOTE",
+        "RH"
+    ],
+    "editor.fontSize": 16,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
 }
