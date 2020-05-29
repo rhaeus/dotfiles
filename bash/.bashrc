@@ -97,6 +97,8 @@ alias r='ranger'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+alias cduni="cd '$HOME/Documents/GoogleDrive/KIT Informatik'"
+alias cdfzi='cd $HOME/Documents/FZI/'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -122,10 +124,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  #tmux attach -t default || tmux new -s default
-  tmux
-fi
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#  #tmux attach -t default || tmux new -s default
+#  tmux
+#fi
 
 # my aliases
 
@@ -182,7 +184,6 @@ PS1='\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36
 
 
 
-export PATH="$PATH:/home/ramona/programs/microchip/xc8/v2.10/bin"
 # robot_folders setup
 export ROB_FOLDERS_IGNORE_CMAKE_PREFIX_PATH=":-)"
 source /home/ramona/Documents/FZI/robot_folders/bin/fzirob_source.sh
@@ -192,18 +193,18 @@ source /home/ramona/Documents/FZI/robot_folders/bin/fzirob_source.sh
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 
-#__conda_setup="$('/home/ramona/programs/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
- #   if [ -f "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh" ]; then
-  #      . "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh"
-  #  else
-   #     export PATH="/home/ramona/programs/anaconda3/bin:$PATH"
-  #  fi
-#fi
-#unset __conda_setup
-#onda config --set changeps1 False
+__conda_setup="$('/home/ramona/programs/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ramona/programs/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+conda config --set changeps1 False
 
 # <<< conda initialize <<<
 
@@ -234,7 +235,11 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=marker:#b48ead,spinner:#ebcb8b,header:#5e81ac
 --layout=reverse'
 #export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"--ansi --preview-window 'right:60%' --preview 'bat --color=always --theme=Nord --style=header,grid --line-range :300 {}'"
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS" --ansi --preview-window 'right:60%' --preview 'bat --color=always --theme=Nord --style=header --line-range :300 {}'"
+#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS" --ansi --preview-window 'right:60%' --preview 'bat --color=always --theme=Nord --style=header --line-range :300 {}'"
 
 export EDITOR=nvim
 
+export PATH="$PATH:/home/ramona/programs/"
+export PATH="$PATH:/home/ramona/.scripts/"
+# export PATH="$PATH:/home/ramona/programs/microchip/xc8/v2.10/bin"
+uni() { find "$HOME/Documents/GoogleDrive/KIT Informatik" -name "*.pdf" -follow -print | fzf |  xargs -I {} -r evince "{}" ; }
