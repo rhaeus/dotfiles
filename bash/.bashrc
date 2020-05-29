@@ -150,7 +150,7 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWUPSTREAM="verbose"
-source ~/.scripts/git-prompt.sh
+source ~/dotfiles/scripts/git-prompt.sh
 
 PS1='\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36m> \e[m'
 #PS1='${debian_chroot:+($debian_chroot)}\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36m> \e[m'
@@ -240,6 +240,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 export EDITOR=nvim
 
 export PATH="$PATH:/home/ramona/programs/"
-export PATH="$PATH:/home/ramona/.scripts/"
+export PATH="$PATH:/home/ramona/dotfiles/scripts/"
 # export PATH="$PATH:/home/ramona/programs/microchip/xc8/v2.10/bin"
 uni() { find "$HOME/Documents/GoogleDrive/KIT Informatik" -name "*.pdf" -follow -print | fzf |  xargs -I {} -r evince "{}" ; }
