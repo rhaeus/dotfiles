@@ -24,4 +24,5 @@ Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-commentary'
 
 Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 call plug#end()
