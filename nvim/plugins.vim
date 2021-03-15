@@ -8,7 +8,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rhysd/vim-clang-format'
 
-"Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 "Plug 'xuyuanp/nerdtree-git-plugin'
 " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger
 

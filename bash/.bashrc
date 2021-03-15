@@ -133,7 +133,7 @@ fi
 
 #cmake
 # export CMAKE_PREFIX_PATH=/home/ramona/programs/Qt/5.12.7/gcc_64/lib/cmake/:/home/ramona/Documents/FZI/octomap/risk_octomap/lib/cmake:$CMAKE_PREFIX_PATH 
-export CMAKE_PREFIX_PATH=/home/ramona/programs/Qt/5.12.7/gcc_64/lib/cmake/:$CMAKE_PREFIX_PATH 
+#export CMAKE_PREFIX_PATH=/home/ramona/programs/Qt/5.12.7/gcc_64/lib/cmake/:$CMAKE_PREFIX_PATH 
 
 #export PATH=/home/ramona/programs/thunderbird/:$PATH 
 #export PATH=/home/ramona/programs/android-studio/bin/:$PATH
@@ -141,7 +141,7 @@ export CMAKE_PREFIX_PATH=/home/ramona/programs/Qt/5.12.7/gcc_64/lib/cmake/:$CMAK
 #powerline
 #export TERM="xterm-256color"
 
-source /home/ramona/kitcar/kitcar-init/config/bashrc_private
+#source /home/ramona/kitcar/kitcar-init/config/bashrc_private
 
 #export PAGER=most #problem with bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -151,8 +151,16 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWUPSTREAM="verbose"
 source ~/dotfiles/scripts/git-prompt.sh
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[1;34m\]\u@\h:\[\033[1;36m\]\w\[\033[0;35m\]\$(parse_git_branch)\[\033[30;1m\] $\n\[\033[1;34m\]>\[\033[0;37m\] "
+# This is it:
+# PS1='\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36m> \e[m'
+# This PS1='\[\e[1;34m\]\u@\h:\[\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\[\e[1;36m>\] \[\e[m\]'
+# PS1='\[\e[1;30m[\e[\e[1;30m\e[1;33m\] \u@\H \[\e[1;32m\]\w\[\e[0m\] \[\e[1;30m\]]\n[ \[\e[1;31m\]\T\[\e[0m\e[1;30m\] ] > \[\e[37m\]'
+# PS1="$PS1\n"
 
-PS1='\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36m> \e[m'
 #PS1='${debian_chroot:+($debian_chroot)}\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36m> \e[m'
 #PS1='${debian_chroot:+($debian_chroot)}\[$(tput bold)\]\e[32;1m\u@\h:\[$(tput bold)\]\e[34;1m\w\e[33;1m$(__git_ps1 " [%s]") \e[30;1m\$ \n\[$(tput bold)\]\e[31;1m> \e[0m'
 
@@ -185,26 +193,26 @@ PS1='\e[1;34m\u@\h:\e[1;36m\w\e[m\e[35m$(__git_ps1 " [%s]") \e[30;1m\$ \n\e[1;36
 
 
 # robot_folders setup
-export ROB_FOLDERS_IGNORE_CMAKE_PREFIX_PATH=":-)"
-source /home/ramona/Documents/FZI/robot_folders/bin/fzirob_source.sh
+#export ROB_FOLDERS_IGNORE_CMAKE_PREFIX_PATH=":-)"
+#source /home/ramona/Documents/FZI/robot_folders/bin/fzirob_source.sh
 
 # test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 
-__conda_setup="$('/home/ramona/programs/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ramona/programs/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-conda config --set changeps1 False
+#__conda_setup="$('/home/ramona/programs/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/home/ramona/programs/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/ramona/programs/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+#conda config --set changeps1 False
 
 # <<< conda initialize <<<
 
@@ -229,7 +237,8 @@ conda config --set changeps1 False
 #--color border:#4C566A
 #'
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
---color=fg:#eceff4,bg:#3B4252,gutter:#3B4252,hl:#a3be8c 
+
+--color=fg:#eceff4,bg:#2E3440,gutter:#2E3440,hl:#a3be8c 
 --color=fg+:#8FBCBB,bg+:#434C5E,hl+:#bf616a 
 --color=info:#ebcb8b,prompt:#5e81ac,pointer:#bf616a 
 --color=marker:#b48ead,spinner:#ebcb8b,header:#5e81ac
@@ -239,7 +248,22 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 export EDITOR=nvim
 
-export PATH="$PATH:/home/ramona/programs/"
+#export PATH="$PATH:/home/ramona/programs/"
 export PATH="$PATH:/home/ramona/dotfiles/scripts/"
 # export PATH="$PATH:/home/ramona/programs/microchip/xc8/v2.10/bin"
 uni() { find "$HOME/Documents/GoogleDrive/KIT Informatik" -name "*.pdf" -follow -print | fzf |  xargs -I {} -r evince "{}" ; }
+
+source /opt/ros/melodic/setup.bash 
+source ~/dd2419_ws/devel/setup.bash
+
+export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/home/ramona/Qt5.12.4/5.12.4/gcc_64/
+
+#Virtualenvwrapper settings:
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.7
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
+
+
+export TURTLEBOT3_MODEL=burger
+

@@ -14,7 +14,7 @@
 	st = status
 [user]
 	name = Ramona Häuselmann
-	email = ujgfd@student.kit.edu
+	email = ramona.haeuselmann@gmail.com
 [core]
 	editor = nvim
 	excludesfile = /home/ramona/.gitignore

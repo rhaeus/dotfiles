@@ -11,6 +11,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/commentary.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/vim-clang-format.vim
+" source $HOME/.config/nvim/plug-config/nerd-tree.vim
 
 " Terminal colors
 " let g:terminal_color_0  = '#2e3436'
