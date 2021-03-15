@@ -21,7 +21,7 @@ nord14='#8FBCBB'
 nord15='#ECEFF4'
 
 
-/home/ramona/programs/i3lock -i /home/ramona/.config/i3/blured_ubuntu_logo.png \
+i3lock -i /home/ramona/dotfiles/pictures/lock.png \
 --clock --indicator \
 --timestr="%H:%M" --datestr="%a %d.%m.%Y" \
 --veriftext="unlocking" --wrongtext="Try again!" \
