@@ -2,7 +2,7 @@
 
 ! ===Nord colors===
 
-! set $nord0  #3B4252   
+nord0:  #3B4252   
 ! set $nord1  #BF616A   
 ! set $nord2  #A3BE8C  
 ! set $nord3  #EBCB8B
@@ -19,13 +19,31 @@
 ! set $nord14 #8FBCBB
 ! set $nord15 #ECEFF4
 
+color0:@$nord0
+set $color1 $nord1
+set $color2 $nord2
+set $color3 $nord3
+set $color4 $nord4
+set $color5 $nord5
+set $color6 $nord6
+set $color7 $nord7
+set $color8 $nord8
+set $color9 $nord9
+set $color10 $nord10
+set $color11 $nord11
+set $color12 $nord12
+set $color13 $nord13
+set $color14$ nord14
+set $color15 $nord15
+
+
 ! State:           ´bg´,     ´fg´,     ´bgalt´,  ´hlbg´,   ´hlfg´
-rofi.color-normal: #3B4252,  #E5E9F0,  #3B4252,  #81A1C1,  #3B4252 
-rofi.color-urgent: #BF616A , #3B4252,  #BF616A,  #EBCB8B,  #3B4252   
-rofi.color-active: #3B4252,  #E5E9F0,  #3B4252,  #81A1C1,  #3B4252 
+rofi.color-normal: color0,  #E5E9F0,  color0,  #81A1C1,  color0
+rofi.color-urgent: #BF616A , color0,  #BF616A,  #EBCB8B,  color0  
+rofi.color-active: color0,  #E5E9F0,  color0,  #81A1C1,  color0
 
 !                  ´background´, ´border´, ´separator´
-rofi.color-window:  #3B4252,      #3B4252,  #3B4252
+rofi.color-window:  color0,      color0,  color0
 
 rofi.location: 1
 rofi.width: 100
